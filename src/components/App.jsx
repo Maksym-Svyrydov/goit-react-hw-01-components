@@ -4,7 +4,8 @@ import { Statistics } from '../components/Statistics/Statistics';
 import data from '../data/data/data.json';
 import { FriendList } from './Friends/Friends';
 import friends from '../data/friends/friends.json';
-
+import { Transactions } from './Transaction/Transaction';
+import TransactionData from '../data/transactions/transactions.json';
 console.log(user);
 export const App = () => {
   return (
@@ -33,6 +34,9 @@ export const App = () => {
       </div>
       <div>
         <FriendList friends={friends} />.
+      </div>
+      <div class="">
+        <Transactions pays={TransactionData} />
       </div>
     </div>
   );
