@@ -1,0 +1,5 @@
+.statistics {
+  display: flex;
+  outline: solid 1px red;
+  width: 100%;
+}

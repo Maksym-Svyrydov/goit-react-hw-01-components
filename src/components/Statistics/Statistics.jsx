@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-
+import css from '../Statistics/stats.module.css';
 export const Statistics = ({ datas }) => {
   return (
-    <section className="statistics">
+    <section className={css.statistics}>
       <h2 className="title">Upload stats</h2>
       <ul className="stat-list">
         {datas.map(data => (

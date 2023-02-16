@@ -6,29 +6,21 @@ import { FriendList } from './Friends/Friends';
 import friends from '../data/friends/friends.json';
 import { Transactions } from './Transaction/Transaction';
 import TransactionData from '../data/transactions/transactions.json';
+import css from '../../src/components/App.module.css';
 console.log(user);
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <div className={css.main}>
       {/* React homework template */}
-      <div>
-        <Profile
-          username={user.username}
-          tag={user.tag}
-          location={user.location}
-          avatar={user.avatar}
-          stats={user.stats}
-        />
-      </div>
+
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+
       <div class="">
         <Statistics datas={data} />
       </div>

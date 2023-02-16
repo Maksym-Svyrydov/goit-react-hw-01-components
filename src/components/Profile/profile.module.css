@@ -1,0 +1,116 @@
+.profile {
+  max-width: 40%;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: 0px 0px 6px 5px rgba(187, 206, 16, 0.75);
+  border-radius: 6px;
+  outline: solid 1px red;
+}
+.description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  outline: solid 1px red;
+}
+.avatar {
+  display: flex;
+  max-width: 50%;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.2),
+    1px 4px 6px rgba(0, 0, 0, 0.2);
+
+  outline: solid 1px red;
+}
+.name {
+  position: relative;
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  outline: solid 1px red;
+}
+/* .tag {
+  display: flex;
+  outline: solid 1px red;
+} */
+.tag,
+.location {
+  margin: 0.5rem;
+  font-size: 2rem;
+  color: #8a8b8e;
+  cursor: pointer;
+  text-decoration: none;
+  outline: solid 1px red;
+}
+.tag:hover {
+  color: #2196f3;
+}
+.location {
+  position: relative;
+  cursor: pointer;
+}
+.location::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2196f3;
+  content: '';
+  transition: width 0.3s ease-out;
+}
+.location:hover::after {
+  width: 100%;
+}
+.stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stats > li {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  border-top: 1px solid #d1d2d9;
+  background-color: rgba(241, 241, 241, 0.833);
+
+  outline: solid 1px red;
+}
+
+.label {
+  padding-bottom: 0.5rem;
+  color: #8a8b8e;
+  /* display: flex; */
+  outline: solid 1px red;
+}
+.quantity {
+  font-weight: bold;
+  border-radius: 0.5rem;
+  /* display: flex; */
+  outline: solid 1px red;
+}
+.followers_list {
+  border-radius: 0 0 0 0.5rem;
+  outline: solid 1px red;
+}
+.views_list {
+  border-left: 1px solid #d1d2d9;
+  border-right: 1px solid #d1d2d9;
+  outline: solid 1px red;
+}
+.likes_list {
+  border-radius: 0 0 0.5rem;
+  outline: solid 1px red;
+}
