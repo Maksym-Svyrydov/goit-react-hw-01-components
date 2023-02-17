@@ -14,9 +14,9 @@ export const Item = styled.li`
   align-items: center;
   box-shadow: ${props => {
     if (props.stat === true) {
-      return `0px 0px 6px 0.1px green`;
+      return `0px 0px 5px 0.1px green`;
     } else {
-      return '0px 0px 6px 0.1px red';
+      return '0px 0px 5px 0.1px red';
     }
   }};
   border-radius: 0.5rem;
