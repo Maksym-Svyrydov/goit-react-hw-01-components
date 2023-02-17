@@ -1,31 +1,39 @@
 import PropTypes from 'prop-types';
-
-export const Transactions = ({ pays, index }) => {
+import {
+  Table,
+  Thead,
+  Row,
+  ColumnHeader,
+  Body,
+  Data,
+} from '../Transaction/Transaction.styled';
+export const Transactions = ({ pays }) => {
   return (
-    <table className="transaction-history">
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
+    <Table>
+      <Thead>
+        <Row>
+          <ColumnHeader>Type</ColumnHeader>
+          <ColumnHeader>Amount</ColumnHeader>
+          <ColumnHeader>Currency</ColumnHeader>
+        </Row>
+      </Thead>
 
-      <tbody>
+      <Body>
         {pays.map(pay => (
-          <tr key={{ index }}>
-            <td>{pay.type}</td>
-            <td>{pay.amount}</td>
-            <td>{pay.currency}</td>
-          </tr>
+          <Row key={pay.id}>
+            <Data>{pay.type}</Data>
+            <Data>{pay.amount}</Data>
+            <Data>{pay.currency}</Data>
+          </Row>
         ))}
-      </tbody>
-    </table>
+      </Body>
+    </Table>
   );
 };
 Transactions.propTypes = {
   pays: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,

@@ -4,10 +4,10 @@ export const FriendList = ({ friends }) => {
   return (
     <List>
       {friends.map(friend => (
-        <Item key={friend.id}>
-          <Status status={friend.isOnline}>{friend.isOnline}</Status>
+        <Item stat={friend.isOnline} key={friend.id}>
+          <Status stat={friend.isOnline}>{friend.isOnline}</Status>
           <Avatar src={friend.avatar} alt={friend.name} width="48" />
-          <Name className="name">{friend.name}</Name>
+          <Name>{friend.name}</Name>
         </Item>
       ))}
     </List>

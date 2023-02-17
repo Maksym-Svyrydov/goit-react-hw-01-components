@@ -6,11 +6,12 @@ import { FriendList } from './Friends/Friends';
 import friends from '../data/friends/friends.json';
 import { Transactions } from './Transaction/Transaction';
 import TransactionData from '../data/transactions/transactions.json';
-import { GlobalStyle } from '../components/GlobalStyled';
+import { Container, GlobalStyle } from '../components/GlobalStyled';
 
 export const App = () => {
   return (
-    <GlobalStyle>
+    <Container>
+      <GlobalStyle />
       <Profile
         username={user.username}
         tag={user.tag}
@@ -21,6 +22,6 @@ export const App = () => {
       <Statistics datas={data} />
       <FriendList friends={friends} />.
       <Transactions pays={TransactionData} />
-    </GlobalStyle>
+    </Container>
   );
 };

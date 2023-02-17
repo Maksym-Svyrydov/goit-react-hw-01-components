@@ -3,7 +3,8 @@ import 'modern-normalize';
 
 export const GlobalStyle = styled.div`
   body {
-    justify-content: center;
+
+    j
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -18,6 +19,14 @@ export const GlobalStyle = styled.div`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+`;
+export const Container = styled.div`
+  align-items: center;
+  color: #010101;
+  display: flex;
+  flex-direction: column;
+  font-size: 40;
+  justify-content: center;
 `;
 
 // export const Container = styled.div`

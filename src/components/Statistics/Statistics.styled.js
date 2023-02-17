@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const Section = styled.section`
+export const Section = styled.div`
   margin-top: 5vh;
   display: flex;
   flex-direction: column;
@@ -13,13 +13,12 @@ export const Section = styled.section`
 `;
 export const Head = styled.h2`
   margin: 0;
-  padding: 2rem;
+  padding: 15px;
   text-transform: uppercase;
   text-align: center;
   color: #000;
   font-weight: bold;
-  font-size: 2.5rem;
-  border-bottom: 1px solid #d3d5e3;
+  font-size: 40px;
 `;
 export const List = styled.ul`
   width: 100%;
@@ -28,6 +27,7 @@ export const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
+  border-top: 3px solid #8a8b8e;
 `;
 
 export const Item = styled.li`
@@ -38,8 +38,6 @@ export const Item = styled.li`
   background-color: ${props => {
     if (props.level <= 10) {
       return 'rgb(37, 150, 190)';
-    } else if (props.level <= 10) {
-      return 'rgb(226,135,67)';
     } else if (props.level <= 20) {
       return 'rgb(234,182,118)';
     } else if (props.level <= 30) {
