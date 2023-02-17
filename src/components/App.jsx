@@ -6,13 +6,11 @@ import { FriendList } from './Friends/Friends';
 import friends from '../data/friends/friends.json';
 import { Transactions } from './Transaction/Transaction';
 import TransactionData from '../data/transactions/transactions.json';
-import css from '../../src/components/App.module.css';
-console.log(user);
+import { GlobalStyle } from '../components/GlobalStyled';
+
 export const App = () => {
   return (
-    <div className={css.main}>
-      {/* React homework template */}
-
+    <GlobalStyle>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -20,16 +18,9 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-
-      <div class="">
-        <Statistics datas={data} />
-      </div>
-      <div>
-        <FriendList friends={friends} />.
-      </div>
-      <div class="">
-        <Transactions pays={TransactionData} />
-      </div>
-    </div>
+      <Statistics datas={data} />
+      <FriendList friends={friends} />.
+      <Transactions pays={TransactionData} />
+    </GlobalStyle>
   );
 };
