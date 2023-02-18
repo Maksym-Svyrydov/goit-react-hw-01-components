@@ -10,9 +10,10 @@ import {
 } from '../Statistics/Statistics.styled';
 
 export const Statistics = ({ stats, title }) => {
+  // title = 'start';
   return (
     <Section>
-      <Head headers={title}>{title}</Head>
+      {title && <Head>{title}</Head>}
       <List>
         {stats.map(data => (
           <Item level={data.percentage} key={data.id}>
