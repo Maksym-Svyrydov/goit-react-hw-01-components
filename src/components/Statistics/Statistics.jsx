@@ -9,12 +9,12 @@ import {
   Percentage,
 } from '../Statistics/Statistics.styled';
 
-export const Statistics = ({ datas }) => {
+export const Statistics = ({ stats, title }) => {
   return (
     <Section>
-      <Head>Upload stats</Head>
+      <Head headers={title}>{title}</Head>
       <List>
-        {datas.map(data => (
+        {stats.map(data => (
           <Item level={data.percentage} key={data.id}>
             <Labels>{data.label}</Labels>
             <Percentage>{data.percentage}%</Percentage>
@@ -24,9 +24,8 @@ export const Statistics = ({ datas }) => {
     </Section>
   );
 };
-
 Statistics.propTypes = {
-  datas: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
